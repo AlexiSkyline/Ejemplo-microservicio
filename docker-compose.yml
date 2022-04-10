@@ -14,6 +14,21 @@ services:
       - postgres
     restart: unless-stopped
 
+  postgres-fraud:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: alexiskyline
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
