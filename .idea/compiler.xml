@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fraud" />
         <module name="customer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="alexiskylineservices" target="18" />
       <module name="customer" target="18" />
+      <module name="fraud" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
